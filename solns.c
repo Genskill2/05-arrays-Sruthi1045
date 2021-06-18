@@ -27,23 +27,12 @@ int min(int a[],int n);
       small=a[j];
     }
   }
-  return small;
-}
-float average(int a[],int n);
-{
-  int i=0,sum=0;
-  float p;
-  for(i=0;i<n;i++)
-  {
-    sum=sum+a[i];
-  }
-  p=(float)sum/n;
-  return p;
+return small;
 }
 int mode(int a[],int n);
 {
   int maxvalue=0,maxcount=0,i,j;
-  for(i=0;ii<n;i++)
+  for(i=0;i<n;i++)
   {
     int count=0;
     for(j=0;j<n;j++)
@@ -63,28 +52,28 @@ int mode(int a[],int n);
 }
 int factors(int n,int a[]);
 {
-  int count=0;
-  while(n%2==0)
-  {
-    a[count]=2;
-    count++;
-    n=n/2;
-  }
-  for(int i=3;i<=sqrt(n);i=i+2)
-  {
+    int count=0;
     while(n%2==0)
     {
-      a[count]=i;
-      count++;
-      n=n/i;
+        a[count]=2;
+        count++;
+        n=n/2;
     }
-  }
-  if(n>2)
-  {
+    for(int i=3;i<=sqrt(n);i=i+2)
+    {
+        while(n%i==0)
+        {
+            a[count]=i;
+            count++;
+            n=n/i;
+        }
+    }
+    if(n>2)
+    {
     a[count]=n;
     count++;
-  }
-  return count;
+    }
+    return count;
 }
     
   
