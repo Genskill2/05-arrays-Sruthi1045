@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #include<assert.h>
 #include<math.h>
-int max(int a[],int n);
+int max(int a[],int n)
 {
   int big,i;
   big=a[0];
@@ -16,7 +16,7 @@ int max(int a[],int n);
   }
   return big;
 }
-int min(int a[],int n);
+int min(int a[],int n)
 {
   int small,j;
   small=a[0];
@@ -29,7 +29,7 @@ int min(int a[],int n);
   }
 return small;
 }
-float average(int a[],int n);
+float average(int a[],int n)
 {
   int i=0,sum=0;
   float avg;
@@ -41,7 +41,7 @@ float average(int a[],int n);
   return avg;
 }
     
-int mode(int a[],int n);
+int mode(int a[],int n)
 {
   int maxvalue=0,maxcount=0,i,j;
   for(i=0;i<n;i++)
@@ -62,7 +62,7 @@ int mode(int a[],int n);
   }
   return maxvalue;
 }
-int factors(int n,int a[]);
+int factors(int n,int a[])
 {
     int count=0;
     while(n%2==0)
