@@ -29,6 +29,18 @@ int min(int a[],int n);
   }
 return small;
 }
+float average(int a[],int n);
+{
+  int i=0,sum=0;
+  float avg;
+  for(i=0;i<n;i++)
+  {
+    sum=sum+a[i];
+  }
+  avg=(float)sum/n;
+  return avg;
+}
+    
 int mode(int a[],int n);
 {
   int maxvalue=0,maxcount=0,i,j;
